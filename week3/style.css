@@ -8,11 +8,11 @@ body{
 }
 h3,h1,h2{
     text-align: center;
-    color: #d18800;
+    color: wheat;
     padding: 0.7em;
 }
 p{
-    font-size: 0.9em;
+    font-size: 1.2em;
     text-align: center;
 }
 ul{
@@ -40,7 +40,6 @@ img{
 }
 #grid-floats .grid-item:nth-child(1){
     width: calc(100%/2 - 10px);
-   
 }
 #grid-floats .grid-item:nth-child(1) img{
     margin-left: 10vw;
@@ -57,8 +56,7 @@ img{
     }
     #grid-floats .grid-item:nth-child(1),
     #grid-floats .grid-item:nth-child(2){
-        width: calc(100%/2 - 10px);
-   
+        width: calc(100%/2 - 10px);  
     }
     #grid-floats .grid-item:nth-child(1) img,
     #grid-floats .grid-item:nth-child(2) img{
@@ -80,6 +78,10 @@ img{
     #grid-floats .grid-item:nth-child(1) img{
         margin-left: 24vw;
         width: 45vw;
+    }
+    #grid-floats .grid-item:nth-child(2) img{
+        width: 20vw;
+        margin-left: 24vw;
     }
     #grid-floats .grid-item:nth-child(n+2) img{
         margin-left: 11.5vw;
@@ -134,8 +136,7 @@ img{
     #grid-flex .grid-item:nth-child(2) img{
         margin-left: 8vw;
         width: 27vw;
-    }
-    
+    } 
 }
 @media (max-width: 576px){
     #grid-flex .grid-item{
@@ -151,6 +152,3 @@ img{
         margin-left: 12vw;
     }
 }
-
-
-
