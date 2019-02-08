@@ -8,6 +8,9 @@ html{
 }
 body{
     background-color: #414141;
+    background-image: url(http://www.biocenit.cat/mypics/86/868392/full-hd-space-wallpapers.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 h3,h1,h2{
     text-align: center;
@@ -23,6 +26,14 @@ ul{
 }
 img{ 
     width: 20vw;
+}
+.grid-item{
+    opacity: 0.85;
+}
+.grid-item:hover{
+    opacity: 1;
+    cursor:pointer;
+    background-color: aqua;
 }
 /***************Floatting********************/
 #grid-floats{
