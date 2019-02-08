@@ -34,6 +34,8 @@ img{
     opacity: 1;
     cursor:pointer;
     background-color: aqua;
+    transform: scale(1.02);
+    transition: all .2s linear;
 }
 /***************Floatting********************/
 #grid-floats{
@@ -50,7 +52,7 @@ img{
     overflow: hidden;
     color: white;
     background-color: #1c1925;
-    animation: zoomIn .2s 1 linear;
+    animation: zoomIn .6s 1 linear;
 }
 #grid-floats li:nth-child(4n){
     clear:both;
@@ -112,7 +114,8 @@ img{
         margin-left: 24vw;
     }
     #grid-floats .grid-item:nth-child(n+2) img{
-        margin-left: 11.5vw;
+        margin-left: 3vw;
+        width: 34vw;
     }
 }
 /***************FLEX********************/
@@ -130,7 +133,7 @@ img{
     border-radius: 10px;  
     color: white;
     background-color: #1c1925;
-    animation: zoomIn .2s 1 linear;
+    animation: zoomIn .6s 1 linear;
 }
 #grid-flex .grid-item:nth-child(1) img{
     margin-left: 10vw;
@@ -161,7 +164,8 @@ img{
         margin-left: 4.5vw;
     }
     #grid-flex .grid-item:nth-child(1) img{
-        width: calc(100%/2 - 10px);
+        width: calc(100%/2 - 10px)  
+                    width: 27vw;
     }
     #grid-flex .grid-item:nth-child(2) img{
         margin-left: 8vw;
@@ -200,13 +204,12 @@ img{
     color: #1c1925;
 }
 /*animation*/
-@-webkit-keyframes zoomIn {
+@-webkit-keyframes zoomIn{
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
-
   50% {
     opacity: 1;
   }
