@@ -50,6 +50,7 @@ img{
     overflow: hidden;
     color: white;
     background-color: #1c1925;
+    animation:zoomIn 0.5s 1 linear;
 }
 #grid-floats li:nth-child(4n){
     clear:both;
@@ -129,6 +130,7 @@ img{
     border-radius: 10px;  
     color: white;
     background-color: #1c1925;
+    animation:zoomIn 0.5s 1 linear;
 }
 #grid-flex .grid-item:nth-child(1) img{
     margin-left: 10vw;
@@ -197,4 +199,16 @@ img{
 #grid-flex .grid-item:nth-child(n+8):nth-child(even){
     background-color: white;
     color: #1c1925;
+}
+/*animation*/
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
