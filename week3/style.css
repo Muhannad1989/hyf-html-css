@@ -1,14 +1,17 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
 }
 body{
-    animation: appear-main 10s;
     background-color: #414141;
 }
 h3,h1,h2{
     text-align: center;
-    color: wheat;
+    color: #ffc500;
     padding: 0.7em;
 }
 p{
@@ -21,6 +24,7 @@ ul{
 img{ 
     width: 20vw;
 }
+/***************Floatting********************/
 #grid-floats{
     overflow: hidden;
 }
@@ -32,11 +36,12 @@ img{
     padding: 10px;
     border: 2px solid #8b8b8b;
     border-radius: 10px;
-    min-height: 35vw;
     overflow: hidden;
     color: white;
     background-color: #1c1925;
-    min-height: 47vw;/*fix*/
+}
+#grid-floats li:nth-child(4n){
+    clear:both;
 }
 #grid-floats .grid-item:nth-child(1){
     width: calc(100%/2 - 10px);  
@@ -49,10 +54,16 @@ img{
 #grid-floats .grid-item:nth-child(n+2) img{
     margin-left: 1vw;
 }
+/*media query*/
 @media (max-width: 992px){
+    #grid-floats li:nth-child(4n){
+    clear:none;
+    }
+    #grid-floats li:nth-child(3n){
+    clear:both;
+    }
     #grid-floats .grid-item{
         width: calc(100%/3 - 10px);
-        min-height: 93vw;/*fix*/
     }
     #grid-floats .grid-item:nth-child(1),
     #grid-floats .grid-item:nth-child(2){
@@ -68,15 +79,20 @@ img{
     }
 }
 @media (max-width: 576px) {
+    #grid-floats li:nth-child(3n){
+    clear:none; 
+    }
+    #grid-floats li:nth-child(2n){
+    clear:both;
+    }
     #grid-floats .grid-item{
         width: calc(100%/2 - 10px);
-        min-height: 108vw;/*fix*/
     } 
     #grid-floats .grid-item:nth-child(1){
         width: calc(100% - 10px);
         }
     #grid-floats .grid-item:nth-child(1) img{
-        margin-left: 24vw;
+        margin-left: 22vw;
         width: 45vw;
     }
     #grid-floats .grid-item:nth-child(2) img{
@@ -113,15 +129,16 @@ img{
     margin-bottom: 1.2vw;
 }
 #grid-flex .grid-item:nth-child(1){
-    flex-basis: calc(100%/2 - 10px);
+    width: calc(100%/2 - 10px);
 }
+/*media query*/
 @media (max-width: 992px){
     #grid-flex .grid-item{
-        flex-basis: calc(100%/3 - 10px)    
+        width: calc(100%/3 - 10px)    
     }
     #grid-flex .grid-item:nth-child(1),
     #grid-flex .grid-item:nth-child(2){
-        flex-basis: calc(100%/2 - 10px);
+        width: calc(100%/2 - 10px);
     }
     #grid-flex .grid-item:nth-child(1) img,
     #grid-flex .grid-item:nth-child(2) img{
@@ -131,7 +148,8 @@ img{
         margin-left: 4.5vw;
     }
     #grid-flex .grid-item:nth-child(1) img{
-        flex-basis: calc(100%/2 - 10px)  
+        width: calc(100%/2 - 10px)  
+                    width: 27vw;
     }
     #grid-flex .grid-item:nth-child(2) img{
         margin-left: 8vw;
@@ -140,19 +158,32 @@ img{
 }
 @media (max-width: 576px){
     #grid-flex .grid-item{
-        flex-basis: calc(100%/2 - 10px)    
+        width: calc(100%/2 - 10px)    
     }    
     #grid-flex .grid-item:nth-child(1){
-        flex-basis: calc(100% - 10px);
-        }
+        width: calc(100% - 10px);
+    }
     #grid-flex .grid-item:nth-child(1) img{
-        margin-left: 32vw;
+        margin-left: 22vw;
+        width: 45vw;
     }
     #grid-flex .grid-item:nth-child(2) img{
         width: 20vw;
         margin-left: 24vw;
     }    
     #grid-flex .grid-item:nth-child(n+2) img{
-        margin-left: 12vw;
+        margin-left: 3vw;
+        width: 34vw;
     }
+}
+/*color background*/
+#grid-floats .grid-item:nth-child(n+1):nth-child(odd):nth-child(-n+7),
+#grid-flex .grid-item:nth-child(n+1):nth-child(odd):nth-child(-n+7){
+    background-color: white;
+    color: #1c1925;
+}
+#grid-floats .grid-item:nth-child(n+8):nth-child(even),
+#grid-flex .grid-item:nth-child(n+8):nth-child(even){
+    background-color: white;
+    color: #1c1925;
 }
