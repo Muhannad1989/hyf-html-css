@@ -50,7 +50,7 @@ img{
     overflow: hidden;
     color: white;
     background-color: #1c1925;
-    animation: zoomIn .5s 1 linear;
+    animation: zoomIn .2s 1 linear;
 }
 #grid-floats li:nth-child(4n){
     clear:both;
@@ -130,7 +130,7 @@ img{
     border-radius: 10px;  
     color: white;
     background-color: #1c1925;
-    animation: zoomIn .5s 1 linear;
+    animation: zoomIn .2s 1 linear;
 }
 #grid-flex .grid-item:nth-child(1) img{
     margin-left: 10vw;
@@ -161,8 +161,7 @@ img{
         margin-left: 4.5vw;
     }
     #grid-flex .grid-item:nth-child(1) img{
-        width: calc(100%/2 - 10px)  
-                    width: 27vw;
+        width: calc(100%/2 - 10px);
     }
     #grid-flex .grid-item:nth-child(2) img{
         margin-left: 8vw;
