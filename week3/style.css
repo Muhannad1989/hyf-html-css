@@ -20,28 +20,36 @@ h3,h1,h2{
 p{
     font-size: 1.2em;
     text-align: center;
+    padding: 0.5em;
 }
 ul{
     list-style: none;
 }
 img{ 
     width: 20vw;
+    display: block;
+    width: 80%;
+    margin: auto;
 }
+/*****************Parents*******************/
+#grid-floats{
+    overflow: hidden;
+}
+#grid-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*****************All************************/
 .grid-item{
     opacity: 0.85;
 }
 .grid-item:hover{
     opacity: 1;
     cursor:pointer;
-    background-color: aqua;
     transform: scale(1.02);
-    transition: all .2s linear;
+    transition: transform .2s linear;
 }
-/***************Floatting********************/
-#grid-floats{
-    overflow: hidden;
-}
-#grid-floats .grid-item{
+.grid-item{
     float: left;
     margin: 5px;
     width: calc(100%/4 - 10px);
@@ -54,21 +62,13 @@ img{
     background-color: #1c1925;
     animation: zoomIn .6s 1 linear;
 }
-#grid-floats li:nth-child(4n){
+li:nth-child(4n){
     clear:both;
 }
-#grid-floats .grid-item:nth-child(1){
+.grid-item:nth-child(1){
     width: calc(100%/2 - 10px);  
 }
-#grid-floats .grid-item:nth-child(1) img{
-    margin-left: 10vw;
-    width: 27vw;
-    margin-bottom: 3vw;
-}
-#grid-floats .grid-item:nth-child(n+2) img{
-    margin-left: 1vw;
-}
-/*media query*/
+/*************media query*****************/
 @media (max-width: 992px){
     #grid-floats li:nth-child(4n){
     clear:none;
@@ -76,20 +76,12 @@ img{
     #grid-floats li:nth-child(3n){
     clear:both;
     }
-    #grid-floats .grid-item{
+    .grid-item{
         width: calc(100%/3 - 10px);
     }
-    #grid-floats .grid-item:nth-child(1),
-    #grid-floats .grid-item:nth-child(2){
+    .grid-item:nth-child(1),
+    .grid-item:nth-child(2){
         width: calc(100%/2 - 10px);
-    }
-    #grid-floats .grid-item:nth-child(1) img,
-    #grid-floats .grid-item:nth-child(2) img{
-        margin-left: 9.4vw;
-        width: 27vw;
-    }
-    #grid-floats .grid-item:nth-child(n+3) img{
-        margin-left: 4.8vw;
     }
 }
 @media (max-width: 576px) {
@@ -99,98 +91,13 @@ img{
     #grid-floats li:nth-child(2n){
     clear:both;
     }
-    #grid-floats .grid-item{
+    .grid-item{
         width: calc(100%/2 - 10px);
     } 
-    #grid-floats .grid-item:nth-child(1){
+    .grid-item:nth-child(1){
         width: calc(100% - 10px);
         }
-    #grid-floats .grid-item:nth-child(1) img{
-        margin-left: 22vw;
-        width: 45vw;
-    }
-    #grid-floats .grid-item:nth-child(2) img{
-        width: 20vw;
-        margin-left: 24vw;
-    }
-    #grid-floats .grid-item:nth-child(n+2) img{
-        margin-left: 3vw;
-        width: 34vw;
-    }
-}
-/***************FLEX********************/
-#grid-flex{
-    display: flex;
-    flex-wrap: wrap;
-}
-#grid-flex .grid-item{
-    float: left;
-    margin: 5px;
-    width: calc(100%/4 - 10px);
-    box-sizing: border-box;
-    padding: 10px;
-    border: 2px solid #8b8b8b;
-    border-radius: 10px;  
-    color: white;
-    background-color: #1c1925;
-    animation: zoomIn .6s 1 linear;
-}
-#grid-flex .grid-item:nth-child(1) img{
-    margin-left: 10vw;
-    width: 27vw;
-    margin-bottom: 3vw
-}
-#grid-flex .grid-item:nth-child(n+2) img{
-    margin-left: 0.7vw;
-    margin-bottom: 1.2vw;
-}
-#grid-flex .grid-item:nth-child(1){
-    width: calc(100%/2 - 10px);
-}
-/*media query*/
-@media (max-width: 992px){
-    #grid-flex .grid-item{
-        width: calc(100%/3 - 10px)    
-    }
-    #grid-flex .grid-item:nth-child(1),
-    #grid-flex .grid-item:nth-child(2){
-        width: calc(100%/2 - 10px);
-    }
-    #grid-flex .grid-item:nth-child(1) img,
-    #grid-flex .grid-item:nth-child(2) img{
-        margin-left: 8.5vw;
-    }
-    #grid-flex .grid-item:nth-child(n+3) img{
-        margin-left: 4.5vw;
-    }
-    #grid-flex .grid-item:nth-child(1) img{
-        width: calc(100%/2 - 10px); 
-        width: 27vw;
-    }
-    #grid-flex .grid-item:nth-child(2) img{
-        margin-left: 8vw;
-        width: 27vw;
-    }
-}
-@media (max-width: 576px){
-    #grid-flex .grid-item{
-        width: calc(100%/2 - 10px)    
-    }    
-    #grid-flex .grid-item:nth-child(1){
-        width: calc(100% - 10px);
-    }
-    #grid-flex .grid-item:nth-child(1) img{
-        margin-left: 22vw;
-        width: 45vw;
-    }
-    #grid-flex .grid-item:nth-child(2) img{
-        width: 20vw;
-        margin-left: 24vw;
-    }    
-    #grid-flex .grid-item:nth-child(n+2) img{
-        margin-left: 3vw;
-        width: 34vw;
-    }
+
 }
 /*color background*/
 #grid-floats .grid-item:nth-child(n+1):nth-child(odd):nth-child(-n+7),
