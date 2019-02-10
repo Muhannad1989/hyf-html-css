@@ -79,8 +79,7 @@ li:nth-child(4n){
     .grid-item{
         width: calc(100%/3 - 10px);
     }
-    .grid-item:nth-child(1),
-    .grid-item:nth-child(2){
+    .grid-item:nth-child(-n+2){
         width: calc(100%/2 - 10px);
     }
 }
