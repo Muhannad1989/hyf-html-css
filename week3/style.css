@@ -61,7 +61,7 @@ img{
     color: white;
     background-color: #1c1925;
     animation: zoomIn .6s 1 linear;
-    min-height: 500px;
+    min-height: 480px;
 }
 li:nth-child(4n){
     clear:both;
