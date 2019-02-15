@@ -38,8 +38,12 @@ nav span{
     font-size: 1.4em;
     margin-top: auto;
     font-family: "RO Sans",Calibri,sans-serif;
-    margin-left: 3vw;
     font-weight: 300;
+}
+.home{
+    margin-left: 5vw;
+    margin-bottom: 2vh;
+    font-weight: 500;
 }
 nav ul li{
     display: inline-block;
@@ -291,8 +295,6 @@ footer .service ul{
     font-family:"RO Sans",Calibri,sans-serif;
     width: 50%;
 }
-
-
 footer .service span{
     padding: 5vw 2vw;
     font-size: 1.5em;
@@ -337,7 +339,6 @@ footer .service ul li a:hover{
     color: black;
     font-weight: bold;
 }
-
 /******************************************************/
 @media (min-width: 480px){
     .moreinfo ul li h3,
@@ -374,6 +375,10 @@ footer .service ul li a:hover{
 @media (min-width: 768px){
     nav{
         padding: 3px 0;
+    }
+    .home{
+        margin-left: 3vw;
+        margin-bottom: 1vw;
     }
     .search1 {
         display: none;
@@ -419,7 +424,6 @@ footer .service ul li a:hover{
 }
 /******************************************************/
 @media (min-width: 992px){
-
     .moreinfo ul li {
         width: calc(100%/2 - 14vw);
         font-size: .6rem;
@@ -442,9 +446,9 @@ footer .service ul li a:hover{
         width: 33%;
     }
     footer .service {
-    background-color: #01689b;
-    padding: 0vw;
-    padding-top: -2vw;
-    padding-bottom: 2vw;
+        background-color: #01689b;
+        padding: 0vw;
+        padding-top: -2vw;
+        padding-bottom: 2vw;
     }
 }
