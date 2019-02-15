@@ -12,9 +12,6 @@ ul{
 a{
     text-decoration: none;
 }
-a:hover{
-    text-decoration: underline;
-}
 /***********logo*****************/
 .logo img{
     margin: 0 0 0 50%;
@@ -65,8 +62,7 @@ section.photo-page{
     background-size: cover;
     background-position: center;
     height: 42vw;
-    height: auto;
-    
+    height: auto;  
 }
 .linkslist,
 .search1,
@@ -78,11 +74,11 @@ section.photo-page{
 }
 .search1{
     width: 150%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 .search1 button,
 .search2 button{
-    padding: 16px 15px;
+    padding: 14px 15px;
     border: none;
     background-color: black;
     color: white;
@@ -150,6 +146,9 @@ section.photo-page{
     text-decoration: none;
     font-size: .8em;
 }
+.articks ul li a:hover{
+    text-decoration: underline;
+}
 .articks ul li p{
     color:#000;   
     font-family:"RO Sans",Calibri,sans-serif;
@@ -179,6 +178,10 @@ section.photo-page{
     width: calc(100% - 3vw);
     margin: 0 1.5vw;
     margin-bottom: 5vw;
+}
+.art ul li a:hover,
+.news ul li a:hover{
+    text-decoration: underline;
 }
 .news ul li:last-of-type{
     margin-bottom: 0vw;
@@ -305,7 +308,7 @@ footer .service h3{
 }
 footer .service ul li a{
     color: white;
-    text-decoration: none;
+  
 }  
 footer .service ul li a:hover{
     color: white;
@@ -334,6 +337,7 @@ footer .service ul li a:hover{
     color: black;
     font-weight: bold;
 }
+
 /******************************************************/
 @media (min-width: 480px){
     .moreinfo ul li h3,
@@ -349,6 +353,10 @@ footer .service ul li a:hover{
         margin-bottom: 2%;
         margin-left: 3%;
         margin-top: 1.9%;
+    }
+     .search1 {
+        width: 162%;
+        margin-left: 5%;
     }
     .art ul li, .news ul li {
         width: calc(100%/2 - 3vw);
@@ -377,8 +385,8 @@ footer .service ul li a:hover{
         margin-top: 4vw;
         margin-left: 10vw;
     }
-    .search2 .searchinput {
-       
+    .search1 button, .search2 button {
+        padding: 16px 15px;
     }
     .linkslist{
         width: 50%;
@@ -436,15 +444,7 @@ footer .service ul li a:hover{
     footer .service {
     background-color: #01689b;
     padding: 0vw;
-    /* padding-bottom: 2vw; */
     padding-top: -2vw;
- 
-        padding-bottom: 2vw;}
-
-
+    padding-bottom: 2vw;
+    }
 }
-
-
-
-
-
