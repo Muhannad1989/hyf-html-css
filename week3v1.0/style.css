@@ -1,7 +1,10 @@
-*{
+*,
+*:before,
+*:after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border-radius: 0; /*to fix couble of problems on mobile screen*/
 }
 html{
     font-size: 16px;
@@ -15,6 +18,7 @@ a{
 /***********logo*****************/
 .logo img{
     margin: 0 0 0 50%;
+    display: block;
 }
 /************navbar****************/
 nav{
@@ -24,14 +28,9 @@ nav{
     overflow: hidden;
     padding: 20px 0;
 }
-nav ul{
-    float: right; 
-    margin-top: 0.6vw;
-    margin-right: 5vw;
-    display: none;
-}
+
 nav span{
-    display: inline-block;
+    display: block;
     width: auto;
     float: left;
     color: white;
@@ -40,10 +39,11 @@ nav span{
     font-family: "RO Sans",Calibri,sans-serif;
     font-weight: 300;
 }
-.home{
-    margin-left: 5vw;
-    margin-bottom: 2vh;
-    font-weight: 500;
+nav ul{
+    float: right; 
+    margin-top: 0.6vw;
+    margin-right: 5vw;
+    display: none;
 }
 nav ul li{
     display: inline-block;
@@ -58,21 +58,20 @@ nav ul li a{
     text-decoration: none;
     font-family:"RO Sans",Calibri,sans-serif;
 }
-section.photo-page{
-    width: 100%;
-    overflow: hidden;
-    background-image: url(img/minimumloon-winkel.jpg);
-    background-color: gray;
-    background-size: cover;
-    background-position: center;
-    height: 42vw;
-    height: auto;  
+nav .home{
+    margin-left: 5vw;
+    margin-bottom: 2vh;
+    font-weight: 500;
 }
+/*************************/
+/*
+instead of using javascript we have 2 searching engine's (simple togglling system).
+The first one for small screen's (which is default:block).
+The other one is for large screen's (which is default:hidden). */
 .linkslist,
 .search1,
 .search2{
     width: 100%;
-    border:1ps solid black;
     float: left;
     overflow: hidden;
 }
@@ -97,15 +96,19 @@ section.photo-page{
     padding-left: 10px;
     margin: auto;
 }
-.search2 .searchinput{
-    width: 75%;
-}
 .search2{
     display: none;
 }
-.linkslist h2{
-    font-weight: 100;
-    font-size: 1.2em;
+.search2 .searchinput{
+    width: 75%;
+}
+section.photo-page{
+    width: 100%;
+    overflow: hidden;
+    background-image: url(img/minimumloon-winkel.jpg);
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
 }
 .linkslist ul{
     background-color: white;
@@ -116,7 +119,11 @@ section.photo-page{
 .linkslist ul li{
     padding: .7vw 0;
 }
-.linkslist span{
+.linkslist h2{
+    font-weight: 100;
+    font-size: 1.2em;
+}
+.linkslist ul li span{
     color: #01689b;
     display: inline-block;
     font-weight: bold;
@@ -132,7 +139,7 @@ section.photo-page{
     font-weight: 600;
 }
 /*******************/
-.articks ul{
+.articles ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -141,19 +148,19 @@ section.photo-page{
     padding: 3vw 3vw;
     font-family: sans-serif;
 }
-.articks ul li{
+.articles ul li{
     width: 100%;
     padding: 2vw 0vw;
 }
-.articks ul li a{
+.articles ul li a{
     color: #01689b;
     text-decoration: none;
     font-size: .8em;
 }
-.articks ul li a:hover{
+.articles ul li a:hover{
     text-decoration: underline;
 }
-.articks ul li p{
+.articles ul li p{
     color:#000;   
     font-family:"RO Sans",Calibri,sans-serif;
 }
@@ -303,11 +310,6 @@ footer .service span{
 footer .service ul li{
     padding: .8vw;
 }
-footer .service h3{
-    font-size: 1.5em;
-    color: white;
-    font-weight: 100;
-}
 footer .service ul li a{
     color: white;
   
@@ -315,6 +317,11 @@ footer .service ul li a{
 footer .service ul li a:hover{
     color: white;
 }  
+footer .service h3{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 100;
+}
 /*******************/
 .language{ 
     margin: auto;
@@ -355,7 +362,7 @@ footer .service ul li a:hover{
         margin-left: 3%;
         margin-top: 1.9%;
     }
-     .search1 {
+    .search1 {
         width: 162%;
         margin-left: 5%;
     }
@@ -396,11 +403,11 @@ footer .service ul li a:hover{
     .linkslist{
         width: 50%;
     }
-     nav ul{
+    nav ul{
         display: inline-block;
         margin-top: 2.2vw;
     }
-     .articks ul li{
+    .articles ul li{
         width: calc(100%/2 - 3vw);
     }
     .art ul li, .news ul li {
@@ -433,7 +440,7 @@ footer .service ul li a:hover{
         width: 60%;
         padding: 1vw 1vw;
         }
-    .articks ul li{
+    .articles ul li{
         width: calc(100%/4 - 3vw);
     }
     .art ul li, .news ul li {
