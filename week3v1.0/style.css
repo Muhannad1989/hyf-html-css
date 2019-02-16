@@ -28,7 +28,6 @@ nav{
     overflow: hidden;
     padding: 20px 0;
 }
-
 nav span{
     display: block;
     width: auto;
@@ -222,7 +221,6 @@ section.photo-page{
     font-size: 1.3em;
     font-weight: bolder;
 }
-
 .art p,
 .news p{
     color: black;
@@ -262,12 +260,11 @@ hr{
     margin-bottom: 2vw;
 }
 .moreinfo ul li h3{
-    font-size: 2em;
+    font-size: 1.8em;
     color: #01689b;
     font-family: "RO Sans",Calibri,Verdana,sans-serif;
     margin-bottom: 3vw;
 }
-
 .moreinfo ul li h3:nth-child(2){
     color: #a90061;
 }
@@ -350,7 +347,7 @@ footer .service h3{
 @media (min-width: 480px){
     .moreinfo ul li h3,
     .moreinfo ul li h3:nth-child(2) {
-        font-size: 3.6em;
+        font-size: 3.5em;
         margin: 0;
     }
     .moreinfo ul li p{
@@ -407,15 +404,15 @@ footer .service h3{
         display: inline-block;
         margin-top: 2.2vw;
     }
-    .articles ul li{
+    .articles ul li,
+    .art ul li, 
+    .news ul li,
+    .moreinfo ul li{
         width: calc(100%/2 - 3vw);
     }
-    .art ul li, .news ul li {
+    .moreinfo ul li{
         width: calc(100%/2 - 3vw);
-    }
-    .moreinfo ul li {
-    width: calc(100%/2 - 3vw);
-    font-size: .8rem;
+        font-size: .8rem;
     }
     footer .service{
         display: flex;
@@ -439,23 +436,21 @@ footer .service h3{
     .linkslist ul{
         width: 60%;
         padding: 1vw 1vw;
-        }
+    }
     .articles ul li{
         width: calc(100%/4 - 3vw);
     }
-    .art ul li, .news ul li {
+    .art ul li, 
+    .news ul li{
         width: calc(100%/3 - 3vw);
     }
-    .news ul li {
-        width: calc(100%/3 - 3vw)    
-    }
-    footer .service ul{
-        width: 33%;
-    }
-    footer .service {
+    footer .service{
         background-color: #01689b;
         padding: 0vw;
         padding-top: -2vw;
         padding-bottom: 2vw;
+    }
+    footer .service ul{
+        width: 33%;
     }
 }
