@@ -62,7 +62,18 @@ nav .home{
     margin-bottom: 2vh;
     font-weight: 500;
 }
-/*************************/
+
+/****************************************/
+.mobile_button{
+    background-color: #01689b;
+    color: white;
+    padding: 2vw;
+    font-size: 2em;
+    border: none;
+    float: right;
+    margin: -1.5vh 3vw;
+}
+/****************************************/
 /*
 instead of using javascript we have 2 searching engine's (simple togglling system).
 The first one for small screen's (which is default:block).
@@ -101,6 +112,31 @@ The other one is for large screen's (which is default:hidden). */
 .search2 .searchinput{
     width: 75%;
 }
+/**************************************/
+.search1 .mobilelist{
+    margin: 0;
+    float: none;
+    transition: all .2s linear;
+    margin-top: 1.5vh;
+}
+.search1 .mobilelist li{
+    color: white;
+    display: block;
+    font-size: 1em;
+    text-align: left;
+    display: inline-block;
+    width: 86vw;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    font-family: sans-serif;
+}
+.search1 .mobilelist li:first-child{
+    border-top: 1px solid white;
+}
+.show{
+    display: block;
+}
+/**************************************/
 section.photo-page{
     width: 100%;
     overflow: hidden;
@@ -383,6 +419,9 @@ footer .service h3{
     .home{
         margin-left: 3vw;
         margin-bottom: 1vw;
+    }
+    .mobile_button{
+        display: none;
     }
     .search1 {
         display: none;
