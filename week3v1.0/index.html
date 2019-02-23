@@ -13,7 +13,8 @@
         </div>
         <nav>
             <span class="home">Home</span>
-            <ul>
+            <button onclick="myFunction()" class="mobile_button">|||</button>
+            <ul class="hide">
                 <li>
                     <a href="">Actueel</a>
                 </li>
@@ -40,6 +41,14 @@
                         <i class="fa fa-search" style="color: white; font-weight: bold ; font-size: 1.2rem "></i>
                     </span>
                 </button>
+                <ul id="dropdown" class="mobilelist">
+                    <li>Actueel</li>
+                    <li>Onderwerpen</li>
+                    <li>Ministeries</li>
+                    <li>Regering</li>
+                    <li>Documenten</li>
+                    <li>Doe mee</li>
+                </ul>
             </div>
         </nav>
         <!----------------------------------->
@@ -311,5 +320,10 @@
                 <span>Nederlandse Gebarentaal</span>
             </div>
         </footer>
+        <script>
+            function myFunction(){
+                document.getElementById("dropdown").classList.toggle("show");
+            }
+        </script>
     </body>
 </html>
