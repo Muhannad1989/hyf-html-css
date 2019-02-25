@@ -283,7 +283,7 @@ hr{
 .moreinfo ul{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 .moreinfo ul li{
     border: .2em solid #CBD2E3;
